@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare Hospitals (Pvt.) Ltd. - Sri Lanka</title>
+    <link rel="stylesheet" href="../css/external.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicons/favicon-16x16.png">
+    <link rel="manifest" href="../favicons/site.webmanifest">
+    <link rel="mask-icon" href="../favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <link rel="manifest" href="../manifest.json">
+</head>
+<body>
+    <header>
+
+        <nav>
+            <ul class="navbar">
+                <img src="../assets/images/MediCare logo.png" alt="logo" id="header-logo">
+                <li class="navl1"> <a href="../index.html">HOME </a></li>
+                <li class="navl1"> <a href="../pages/about.html">ABOUT US </a> </li>
+                <li class="services-menu"> SERVICES 
+                    <ul class="services-dropdown">
+                        <li class="lt1"> <a href="../pages/services.html">24-H Services </a></li>
+                        <li class="lt1"> <a href="../pages/services.html">Emergency Unit Services </a> </li> 
+                        <li class="lt1"> <a href="../pages/services.html">Diabetes Clinic </a></li>
+                        <li class="lt1"> <a href="../pages/services.html">Cancer Care Unit </a></li>
+                        <li class="lt1"> <a href="../pages/services.html">ENT </a></li>
+                    </ul>
+                </li>
+
+                <li class="navl1"> <a href="../pages/doctors.html">DOCTORS </a></li>
+                <li class="navl1"> <a href="../pages/channeling.html">CHANNELING </a></li>
+                <li class="navl1"> <a href="../pages/pharmacy.html">MEDICARE PHARMACY </a></li>
+                <li class="navl1"> <a href="../pages/registration.html">PATIENT REGISTRATION</a></li>
+                    <form>
+                        <input type="text" placeholder="⌕     SEARCH HERE    ">
+                        <button type="submit"> SEARCH </button>
+                    </form>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="box">
+        <section class="banner">
+            <h1>Patient Registration</h1>
+        </section>
+
+        <section class="sheet">
+            <h2>Register Here</h2>
+            <form id="signupSheet">
+                <div class="row">
+                    <label class="tag" for="fullName">Patient Name</label>
+                    <input type="text" id="fullName" class="slot" required>
+                </div>
+                <div class="row">
+                    <label class="tag" for="location">Address</label>
+                    <input type="text" id="location" class="slot" required>
+                </div>
+                <div class="row">
+                    <label class="tag" for="birthDay">Date of Birth</label>
+                    <input type="date" id="birthDay" class="slot" required>
+                </div>
+                <div class="row">
+                    <label class="tag" for="sex">Gender</label>
+                    <select id="sex" class="pick" required>
+                        <option value="">Select gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <label class="tag" for="mail">Email Address</label>
+                    <input type="email" id="mail" class="slot" required>
+                </div>
+                <div class="row">
+                    <label class="tag" for="tel">Phone</label>
+                    <input type="tel" id="tel" class="slot" required>
+                </div>
+                <button type="submit" class="press">Register</button>
+            </form>
+        </section>
+
+        <section class="sheet">
+            <h2>Already a patient? Login Here</h2>
+            <form id="enterSheet">
+                <div class="row">
+                    <label class="tag" for="userMail">Email Address</label>
+                    <input type="email" id="userMail" class="slot" placeholder="Enter your email" required>
+                </div>
+                <div class="row">
+                    <label class="tag" for="userKey">Password</label>
+                    <input type="password" id="userKey" class="slot" required>
+                </div>
+                <button type="submit" class="press">Login</button>
+            </form>
+        </section>
+    </main>
+<hr>
+
+<footer>
+    <div class="footer-main">
+        <div class="footer-sub1">
+            <img src="../assets/images/MediCare logo.png" id="footer-logo" alt="Logo">
+    
+            <div id="footer-phone">
+                <img src="../assets/images/Footer/Mobile Phone.png" id="phone" alt="phone-icon">
+                <a href="tel:+94112315787">+94 112 315 787</a>
+            </div>
+    
+            <div id="footer-location">
+                <img src="../assets/images/Footer/Location.png" id="location" alt="location-icon">
+                <div class="location-links">
+                    <a href="https://maps.app.goo.gl/et4s45bRjtXZ5R258" target="_blank">Colombo Branch</a>
+                    <a href="https://maps.app.goo.gl/DycChQBfhxfqHTDT7" target="_blank">Galle Branch</a>
+                    <a href="https://maps.app.goo.gl/p52PDtj3LrZ8LEFs7" target="_blank">Anuradhapura Branch</a>
+                </div>
+            </div>
+    
+            <div id="footer-email">
+                <img src="../assets/images/Footer/Email.png" id="email" alt="email-icon">
+                <a href="mailto:services@medicarehospitals.com">services@medicarehospitals.com</a>
+            </div>
+        </div>
+    
+        <div class="footer-sub2">
+            <h1>Medicare Hospitals</h1>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pages/about.html">Branches</a></li>
+                <li><a href="../pages/about.html">Contact Us</a></li>
+            </ul>
+        </div>
+    
+        <div class="footer-sub3">
+            <h1>Services</h1>
+            <ul>
+                <li><a href="../pages/services.html">24 Hour Services</a></li>
+                <li><a href="../pages/services.html">Emergency Unit</a></li>
+                <li><a href="../pages/services.html">ENT</a></li>
+                <li><a href="../pages/services.html">SEE ALL SERVICES...></a></li>
+            </ul>
+        </div>
+    
+        <div class="footer-sub4">
+            <h1>About</h1>
+            <ul>
+                <li><a href="../pages/doctors.html">Medicare Doctors</a></li>
+                <li><a href="../pages/channeling.html">Online Channeling</a></li>
+            </ul>
+            <div class="footer-images">
+                <a href="https://www.twitter.com" target="_blank"><img src="../assets/images/Footer/twitter.png" alt="twitter-link"></a>
+                <a href="https://www.linkedin.com"target="_blank"><img src="../assets/images/Footer/linkedin.png" alt="linkedin-link"></a>
+                <a href="https://www.facebook.com"target="_blank"><img src="../assets/images/Footer/facebook.png" alt="facebook-link"></a>
+                <a href="https://www.instagram.com"target="_blank"><img src="../assets/images/Footer/Instagram.png" alt="Instagram-link"></a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <center>Copyright © 2024 MediCare Hospitals</center>
+    <hr>
+</footer>
+
+<script>
+    window.addEventListener('load', () => {
+      registerSW();
+    });
+ 
+    async function registerSW() {
+      if ('serviceWorker' in navigator) {
+        try {
+          await navigator
+                .serviceWorker
+                .register('serviceworker.js');
+        }
+        catch (e) {
+          console.log('SW registration failed');
+        }
+      }
+    }
+ </script>
+
+</body>
+</html>

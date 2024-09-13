@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare Hospitals (Pvt.) Ltd. - Sri Lanka</title>
+    <link rel="stylesheet" href="../css/external.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicons/favicon-16x16.png">
+    <link rel="manifest" href="../favicons/site.webmanifest">
+    <link rel="mask-icon" href="../favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <link rel="manifest" href="../manifest.json">
+</head>
+<body>
+    <header>
+
+        <nav>
+            <ul class="navbar">
+                <img src="../assets/images/MediCare logo.png" alt="logo" id="header-logo">
+                <li class="navl1"> <a href="../index.html">HOME </a></li>
+                <li class="navl1"> <a href="../pages/about.html">ABOUT US </a> </li>
+                <li class="services-menu"> SERVICES 
+                    <ul class="services-dropdown">
+                        <li class="lt1"> <a href="../pages/services.html">24-H Services </a></li>
+                        <li class="lt1"> <a href="../pages/services.html">Emergency Unit Services </a> </li> 
+                        <li class="lt1"> <a href="../pages/services.html">Diabetes Clinic </a></li>
+                        <li class="lt1"> <a href="../pages/services.html">Cancer Care Unit </a></li>
+                        <li class="lt1"> <a href="../pages/services.html">ENT </a></li>
+                    </ul>
+                </li>
+
+                <li class="navl1"> <a href="../pages/doctors.html">DOCTORS </a></li>
+                <li class="navl1"> <a href="../pages/channeling.html">CHANNELING </a></li>
+                <li class="navl1"> <a href="../pages/pharmacy.html">MEDICARE PHARMACY </a></li>
+                <li class="navl1"> <a href="../pages/registration.html">PATIENT REGISTRATION</a></li>
+                    <form>
+                        <input type="text" placeholder="⌕     SEARCH HERE    ">
+                        <button type="submit"> SEARCH </button>
+                    </form>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="container">
+        <section class="hero1">
+            <h1>E-Channeling</h1>
+            <p>Book your doctor's appointment online</p>
+        </section>
+
+        <section class="form-container">
+            <h2>Book Appointment</h2>
+            <form>
+                <div class="form-group">
+                    <label for="patient-name">Patient's Name</label>
+                    <input type="text" id="patient-name" name="patient-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="doctor-name">Doctor's Name</label>
+                    <select id="doctor-name" name="doctor-name" required>
+                        <option value="">Select a doctor</option>
+                        <option value="lakmini_silva">Dr. Lakmini Silva</option>
+                        <option value="tharindu_de_silva">Dr. Tharindu De Silva</option>
+                        <option value="harsha_jayawardena">Dr. Harsha Jayawardena</option>
+                        <option value="ishara_abeysekara">Dr. Ishara Abeysekara</option>
+                        <option value="lakshan_gunawardena">Dr. Lakshan Gunawardena</option>
+                        <option value="chamal_fernando">Dr. Chamal Fernando</option>
+                        <option value="priyanka_ekanayake">Dr. Priyanka Ekanayake</option>
+                        <option value="ruwan_edirisinghe">Dr. Ruwan Edirisinghe</option>
+                        <option value="samanthi_seneviratne">Dr. Samanthi Seneviratne</option>
+                        <option value="suranga_hettiarachchi">Dr. Suranga Hettiarachchi</option>
+                        <option value="ruwanthi_peris">Dr. Ruwanthi Peris</option>
+                        <option value="dilan_gunathilake">Dr. Dilan Gunathilake</option>
+                        <option value="sajith_kumara">Dr. Sajith Kumara</option>
+                        <option value="anil_senarath">Dr. Anil Senarath</option>
+                        <option value="himali_perera">Dr. Himali Perera</option>
+                        <option value="shehan_jayakody">Dr. Shehan Jayakody</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="specialization">Specialization</label>
+                    <select id="specialization" name="specialization" required>
+                        <option value="">Select specialization</option>
+                        <option value="cardiology">Cardiology</option>
+                        <option value="neurology">Neurology</option>
+                        <option value="oncology">Oncology</option>
+                        <option value="orthopedics">Orthopedics</option>
+                        <option value="pediatrics">Pediatrics</option>
+                        <option value="gastroenterology">Gastroenterology</option>
+                        <option value="dermatology">Dermatology</option>
+                        <option value="endocrinology">Endocrinology</option>
+                        <option value="pulmonology">Pulmonology</option>
+                        <option value="rheumatology">Rheumatology</option>
+                        <option value="infectious_diseases">Infectious Diseases</option>
+                        <option value="nephrology">Nephrology</option>
+                        <option value="urology">Urology</option>
+                        <option value="general_surgery">General Surgery</option>
+                        <option value="obstetrics_and_gynecology">Obstetrics and Gynecology</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="branch">Branch</label>
+                    <select id="branch" name="branch" required>
+                        <option value="">Select branch</option>
+                        <option value="colombo">Colombo Branch</option>
+                        <option value="galle">Galle Branch</option>
+                        <option value="anuradhapura">Anuradhapura Branch</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Available Dates</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label>Confirmation</label>
+                    <label><input type="radio" name="confirmation" value="yes" required> Yes</label>
+                    <label><input type="radio" name="confirmation" value="no" required> No</label>
+                </div>
+                <button type="submit" id="button-ch">Submit</button>
+            </form>
+        </section>
+    </main>
+<hr>
+
+<footer>
+    <div class="footer-main">
+        <div class="footer-sub1">
+            <img src="../assets/images/MediCare logo.png" id="footer-logo" alt="Logo">
+    
+            <div id="footer-phone">
+                <img src="../assets/images/Footer/Mobile Phone.png" id="phone" alt="phone-icon">
+                <a href="tel:+94112315787">+94 112 315 787</a>
+            </div>
+    
+            <div id="footer-location">
+                <img src="../assets/images/Footer/Location.png" id="location" alt="location-icon">
+                <div class="location-links">
+                    <a href="https://maps.app.goo.gl/et4s45bRjtXZ5R258" target="_blank">Colombo Branch</a>
+                    <a href="https://maps.app.goo.gl/DycChQBfhxfqHTDT7" target="_blank">Galle Branch</a>
+                    <a href="https://maps.app.goo.gl/p52PDtj3LrZ8LEFs7" target="_blank">Anuradhapura Branch</a>
+                </div>
+            </div>
+    
+            <div id="footer-email">
+                <img src="../assets/images/Footer/Email.png" id="email" alt="email-icon">
+                <a href="mailto:services@medicarehospitals.com">services@medicarehospitals.com</a>
+            </div>
+        </div>
+    
+        <div class="footer-sub2">
+            <h1>Medicare Hospitals</h1>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pages/about.html">Branches</a></li>
+                <li><a href="../pages/about.html">Contact Us</a></li>
+            </ul>
+        </div>
+    
+        <div class="footer-sub3">
+            <h1>Services</h1>
+            <ul>
+                <li><a href="../pages/services.html">24 Hour Services</a></li>
+                <li><a href="../pages/services.html">Emergency Unit</a></li>
+                <li><a href="../pages/services.html">ENT</a></li>
+                <li><a href="../pages/services.html">SEE ALL SERVICES...></a></li>
+            </ul>
+        </div>
+    
+        <div class="footer-sub4">
+            <h1>About</h1>
+            <ul>
+                <li><a href="../pages/doctors.html">Medicare Doctors</a></li>
+                <li><a href="../pages/channeling.html">Online Channeling</a></li>
+            </ul>
+            <div class="footer-images">
+                <a href="https://www.twitter.com" target="_blank"><img src="../assets/images/Footer/twitter.png" alt="twitter-link"></a>
+                <a href="https://www.linkedin.com"target="_blank"><img src="../assets/images/Footer/linkedin.png" alt="linkedin-link"></a>
+                <a href="https://www.facebook.com"target="_blank"><img src="../assets/images/Footer/facebook.png" alt="facebook-link"></a>
+                <a href="https://www.instagram.com"target="_blank"><img src="../assets/images/Footer/Instagram.png" alt="Instagram-link"></a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <center>Copyright © 2024 MediCare Hospitals</center>
+    <hr>
+</footer>
+
+<script>
+    window.addEventListener('load', () => {
+      registerSW();
+    });
+ 
+    async function registerSW() {
+      if ('serviceWorker' in navigator) {
+        try {
+          await navigator
+                .serviceWorker
+                .register('serviceworker.js');
+        }
+        catch (e) {
+          console.log('SW registration failed');
+        }
+      }
+    }
+ </script>
+
+</body>
+</html>
