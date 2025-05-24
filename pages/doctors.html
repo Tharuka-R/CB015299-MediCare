@@ -45,16 +45,16 @@
     </header>
 
     <main>
-        <section class="hero">
+        <section class="hero"> <!-- Hero is usually visible on load, no fade-in -->
             <h1>Medical Experts</h1>
         </section>
 
-        <section class="about-experts">
+        <section class="about-experts fade-in-section">
             <h2>About Our Medical Experts</h2>
             <p>Our team of highly skilled and experienced medical professionals is dedicated to providing the best care for our patients. With expertise across various specialties, we ensure comprehensive and personalized treatment for all your healthcare needs.</p>
         </section>
 
-        <section class="doctor-grid">
+        <section class="doctor-grid fade-in-section">
             <div class="doctor-item"><img src="../assets/images/Doctors Page/MedicalChief.png"></div>
             <div class="doctor-item"><img src="../assets/images/Doctors Page/Physician.png"></div>
             <div class="doctor-item"><img src="../assets/images/Doctors Page/Diabetic.png"></div>
@@ -63,7 +63,7 @@
             <div class="doctor-item"><img src="../assets/images/Doctors Page/fm-doc.png"></div>
         </section>
 
-        <section class="physician-lists">
+        <section class="physician-lists fade-in-section">
             <div class="physician-category">
                 <h3>General Physicians</h3>
                 <ol class="physician-list">
@@ -106,7 +106,7 @@
             </div>
         </section>
 
-        <div class="bottom-image"><img src="../assets/images/Doctors Page/bottom-img-doc.png"></div>
+        <div class="bottom-image fade-in-section"><img src="../assets/images/Doctors Page/bottom-img-doc.png"></div>
     </main>
 
 
@@ -192,6 +192,33 @@
           }
         }
      </script>
+
+    <script>
+    // Ensure this runs after DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('.fade-in-section');
+        if (sections.length === 0) return; // No sections to animate on this page
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1 
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    });
+    </script>
 
 </body>
 </html>

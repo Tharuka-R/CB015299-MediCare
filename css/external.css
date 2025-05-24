@@ -894,6 +894,24 @@ header nav .navbar{
 
 }
 
+header nav .navbar form {
+    display: flex; /* Align input and button nicely */
+    width: 100%;   /* Take full available width in the column */
+    padding: 0 10px; /* Add some horizontal padding */
+    box-sizing: border-box;
+}
+
+header nav .navbar form input[type="search"] {
+    flex-grow: 1;  /* Allow input to take available space */
+    min-width: 0;  /* Allow input to shrink properly */
+    /* Existing padding, border, radius are fine */
+}
+
+header nav .navbar form button {
+    flex-shrink: 0; /* Prevent button from shrinking */
+    /* Existing padding, border, radius are fine */
+}
+
 nav .navbar .services-menu { /* Ensure it takes full width for dropdown */
     width: 100%;
     text-align: center;
@@ -1055,6 +1073,38 @@ nav .navbar .services-menu { /* Ensure it takes full width for dropdown */
     text-align: justify; /* Or center if it looks better */
 }
 
+.branch-images { /* From About Us Page */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+    gap: 5px; /* Reduced gap for mobile */
+}
+
+/* Patient Registration Page (.row, .tag, .slot, .pick) */
+.row { /* From Patient Registration Page */
+    display: flex;
+    flex-direction: column; /* Stack label and input */
+    margin-bottom: 1rem; /* Adjust spacing between rows for mobile */
+}
+
+.tag { /* From Patient Registration Page */
+    width: 100%; /* Label takes full width */
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 0.5rem; /* Space between label and input */
+    text-align: left; /* Ensure labels are aligned left */
+}
+
+.slot, .pick { /* From Patient Registration Page */
+    width: 100%; /* Input/select takes full width */
+}
+
+.image-item img { /* From Services Page */
+    object-fit: cover; /* Ensure image covers the area without distortion */
+}
+
+.button-container { /* From Services Page */
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center;   /* Center-align the stacked buttons */
+    gap: 1rem;             /* Add some space between stacked buttons */
+}
 
 .image-gallery {
     justify-content: center;
@@ -1076,8 +1126,96 @@ nav .navbar .services-menu { /* Ensure it takes full width for dropdown */
     margin-bottom: 20px;
 }
 
+/* Accordion for Services Page on Mobile */
+.service-section .service-title { /* Within @media (max-width:990px) */
+    cursor: pointer;
+    position: relative; /* For pseudo-element positioning */
+}
+
+.service-section .service-title::after { /* Within @media (max-width:990px) */
+    content: '▼';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.service-section.active .service-title::after { /* Within @media (max-width:990px) */
+    transform: translateY(-50%) rotate(180deg); /* Rotate icon when active */
+}
+
+.service-section .service-content { /* Within @media (max-width:990px) */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out; /* Added padding transition */
+    padding-top: 0; 
+    padding-bottom: 0;
+    /* text-align: justify; is inherited from desktop, which is fine */
+}
+
+.service-section.active .service-content { /* Within @media (max-width:990px) */
+    max-height: 1000px; /* Adjust as needed */
+    padding-top: 10px; 
+    padding-bottom: 10px;
+}
 
 
+/* :active states for mobile touch feedback */
 
+/* Primary Buttons */
+.button:active,
+#button-ch:active,
+.action-trigger:active,
+.press:active {
+    background-color: #2c6ead; /* Darker than hover */
+    transform: translateY(0px); /* Reset hover transform, or give slight press down */
+}
+
+/* Navbar Search Button */
+header nav .navbar form button:active {
+    background-color: #357ABD; /* Darker than its hover */
+    color: #e0e0e0; /* Slightly dimmer white */
+    transform: translateY(0px);
+}
+
+/* Navigation Links (background on LI, text on A if separate) */
+.navbar .navl1:active,
+nav .navbar .services-menu:active {
+    background-color: #357ABD; /* Darker than hover */
+}
+
+.navbar .navl1 a:active {
+    color: #e0e0e0; /* Slightly dimmer white */
+}
+/* For .services-menu, text color is directly on it, so :active state above handles its text too if color was white */
+nav .navbar .services-menu:active { /* Ensuring text color for services menu itself */
+    color: #e0e0e0;
+}
+
+
+/* Services Dropdown Links */
+.services-dropdown .lt1:active {
+    background-color: #357ABD; /* Darker than hover */
+}
+
+.services-dropdown .lt1 a:active {
+    color: #e0e0e0; /* Slightly dimmer white */
+}
+
+/* Footer Links */
+.footer-sub1 a:active, 
+.footer-sub2 a:active, 
+.footer-sub3 a:active, 
+.footer-sub4 a:active {
+    color: #cccccc; /* Slightly dimmer than hover's #FFFFFF */
+    /* text-decoration: underline; is already on hover, will persist */
+}
+
+/* Footer Social Icons */
+.footer-images a img:active {
+    transform: scale(1); /* Reset hover scale */
+    opacity: 0.8; /* Feedback for tap */
+}
 
 }

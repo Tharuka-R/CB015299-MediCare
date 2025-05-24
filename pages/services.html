@@ -45,9 +45,9 @@
     </header>
 
     <main>
-        <h1 class="services-title">Services</h1>
+        <h1 class="services-title fade-in-section">Services</h1>
 
-        <div class="image-gallery">
+        <div class="image-gallery fade-in-section">
             <div class="image-item"><img src="../assets/images/Services Page/24HourServices.png"></div>
             <div class="image-item"><img src="../assets/images/Services Page/EmergencyUnit.png"></div>
             <div class="image-item"><img src="../assets/images/Services Page/DiabetesClinic.png"></div>
@@ -55,42 +55,42 @@
             <div class="image-item"><img src="../assets/images/Services Page/ENT.png"></div>
         </div>
 
-        <div class="service-section">
+        <div class="service-section fade-in-section">
             <h2 class="service-title">24 Hour Services</h2>
             <div class="service-content">
                 <p>Medicare Hospitals offers 24-hour services to provide quality medical care at any time, including late-night emergencies, urgent care, and specialized treatments. Their dedicated medical professionals are available to offer swift diagnoses, immediate interventions, and critical life-saving procedures. The 24-hour facility includes a fully equipped emergency unit, on-call specialists, diagnostic labs, and a pharmacy. MediCare Hospitals is committed to providing consistent, compassionate care at any hour, as health and well-being are their priority 24/7. Both hospitals are dedicated to providing quality care to their patients.</p>
             </div>
         </div>
 
-        <div class="service-section">
+        <div class="service-section fade-in-section">
             <h2 class="service-title">Emergency Unit</h2>
             <div class="service-content">
                 <p>MediCare Hospitals has a fully equipped Emergency Unit that offers immediate care to patients in need of life-sustaining intervention. The 24/7 service is staffed by highly qualified doctors, nurses, and specialists who can handle various medical emergencies, including accidents, trauma, severe ailments, and sudden complications. Modern medical technology and efficient response procedures are used to stabilize patient health. The Emergency Unit is equipped with advanced diagnostic instruments and on-call experts, allowing for quick assessment and treatment of complex medical conditions. Medicare Hospitals focuses on providing compassionate, competent medical treatment in the most timely manner.</p>
             </div>
         </div>
 
-        <div class="service-section">
+        <div class="service-section fade-in-section">
             <h2 class="service-title">Diabetes Clinic</h2>
             <div class="service-content">
                 <p>MediCare Hospitals' Diabetes Clinic focuses on managing diabetes conditions through personalized treatments and prevention methods. The clinic, staffed by endocrinologists, nutritionists, and diabetes educators, offers a range of services, including blood glucose monitoring, pharmaceutical management, nutrition counseling, and lifestyle recommendations. They also provide education to help patients understand their disease state and make informed decisions about their health. The clinic aims to promote diabetes control, enhance quality of life, and prevent complications in a supportive environment. MediCare Hospitals prioritizes patient health and comfort.</p>
             </div>
         </div>
 
-        <div class="service-section">
+        <div class="service-section fade-in-section">
             <h2 class="service-title">Cancer Care Unit</h2>
             <div class="service-content">
                 <p>MediCare Hospitals' Cancer Care Unit provides personalized, modern medical treatment for cancer patients, including early detection, chemotherapy, radiation therapy, and surgery. A multidisciplinary team of oncologists, surgeons, and specialists collaborates to plan treatments that meet each patient's unique needs. The unit also offers emotional and psychological assistance throughout the treatment process, ensuring comprehensive care for patients and their families at all stages of the process.</p>
             </div>
         </div>
 
-        <div class="service-section">
+        <div class="service-section fade-in-section">
             <h2 class="service-title">ENT</h2>
             <div class="service-content">
                 <p>The ENT Department at MediCare Hospitals provides specialist treatments for ear, nose, throat, head, and neck conditions. With a multidisciplinary team of experienced consultants, they offer quality, personalized care ranging from common issues like sinusitis to complex surgical procedures. They use advanced methodologies and technologies to optimize patient outcomes. The ENT Department aims to enhance respiratory function, auditory capability, and overall well-being for patients, whether dealing with chronic ailments or urgent health concerns.</p>
             </div>
         </div>
 
-        <div class="button-container">
+        <div class="button-container fade-in-section">
             <a href="./channeling.html" class="button">Channel your Doctor Here</a>
             <a href="./registration.html" class="button">Patient Registration</a>
         </div>
@@ -179,6 +179,49 @@
         }
      </script>
 
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Accordion for Services Page
+        const serviceSections = document.querySelectorAll('.service-section');
+        serviceSections.forEach(section => {
+            const title = section.querySelector('.service-title');
+            if (title) {
+                title.addEventListener('click', function() {
+                    // Optional: Close other open sections for a strict accordion
+                    // serviceSections.forEach(s => {
+                    //     if (s !== section && s.classList.contains('active')) { // Check if it contains active
+                    //         s.classList.remove('active');
+                    //     }
+                    // });
+                    section.classList.toggle('active');
+                });
+            }
+        });
+
+        // IntersectionObserver script for fade-in
+        const sectionsToFade = document.querySelectorAll('.fade-in-section');
+        if (sectionsToFade.length > 0) { // Check if there are any sections to fade
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1 
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            sectionsToFade.forEach(section => {
+                observer.observe(section);
+            });
+        }
+    });
+    </script>
 
 </body>
 </html>

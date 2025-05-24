@@ -47,7 +47,7 @@
 
     <main class="container-abtus">
         <h1>About Us</h1>
-        <section class="about-section">
+        <section class="about-section fade-in-section">
             <div class="about-image"><img src="../assets/images/About Us Page/About-Us-Page.png"></div>
             <div class="about-content">
                 <p>MediCare Hospitals is dedicated to provide the greatest health care to society. We believe in providing patients with innovative technology and politeness in service, and we strive to satisfy the different health requirements of the communities we serve. We take pride in having established a network of three branches to make our services more accessible: the Colombo Branch, which has cutting-edge facilities in the heart of the city; the Galle Branch, which provides quality care to the Southern Province; and the Anuradhapura Branch, which provides quality medical solutions in sophisticated forms to patients in the Northern region. MediCare Hospitals is committed to providing exceptional healthcare services in a convenient location near the patient's home.</p>
@@ -57,7 +57,7 @@
         <hr>
 
         <h2>Branches</h2>
-        <section class="branches">
+        <section class="branches fade-in-section">
             <div class="branch">
                 <h3>Colombo Branch</h3>
                 <p>The Colombo Branch in Sri Lanka's capital offers modern healthcare with advanced facilities and equipment. It provides specialized therapies, advanced diagnostic equipment, and a team of qualified specialists. Located in the city's heart, it offers exceptional services to residents of Colombo and surrounding areas.</p>
@@ -200,5 +200,32 @@
           }
         }
      </script>
+
+    <script>
+    // Ensure this runs after DOM is loaded if not already handled by accordion script
+    document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('.fade-in-section');
+        if (sections.length === 0) return; // No sections to animate on this page
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1 
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    });
+    </script>
 </body>
 </html>
